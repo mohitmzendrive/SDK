@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adunit_navigation"
+    app:startDestination="@id/adUnitFragment">
+
+    <fragment
+        android:id="@+id/adUnitFragment"
+        android:name="com.mohitmandalia.adunit.AdUnitFragment"
+        android:label="fragment_ad_unit"
+        tools:layout="@layout/fragment_ad_unit" >
+        <action
+            android:id="@+id/action_adUnitFragment_to_PIFragment"
+            app:destination="@id/PIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PIFragment"
+        android:name="com.mohitmandalia.adunit.PIFragment"
+        android:label="fragment_p_i"
+        tools:layout="@layout/fragment_p_i" />
+</navigation>

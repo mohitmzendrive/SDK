@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/light_green"
+    app:cardCornerRadius="@dimen/dp18"
+    app:cardElevation="@dimen/dp2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp16"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_begin="@dimen/dp24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_end="@dimen/dp24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="@dimen/dp96"
+            android:layout_height="@dimen/dp48"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="@dimen/dp4"
+            app:cardElevation="@dimen/dp8"
+            android:visibility="gone"
+            android:backgroundTint="#CEF6E9"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/dp4"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@drawable/progressive"
+                android:src="@drawable/progressive"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            style="@style/headline_9"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoCard"
+            android:layout_marginTop="@dimen/dp24"
+            android:gravity="center_horizontal"
+            android:textColor="@color/tx_deep_grey"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/logoCard"
+            android:text="@string/your_discount_is" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ad_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp148"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/dp8"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:srcCompat="@drawable/electronic_banking"
+            tools:srcCompat="@drawable/electronic_banking" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/body"
+            style="@style/subtitle_1"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:gravity="center_horizontal"
+            android:textColor="@color/tx_dark_grey"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/ad_image"
+            android:text="@string/brings_you_this"
+            tools:visibility="visible" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/points"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp12"
+            android:clipToPadding="false"
+            android:gravity="start|top"
+            android:textColor="@color/tx_dark_grey"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/body"
+            tools:itemCount="5"
+            tools:listitem="@layout/layout_item_point"
+            tools:visibility="visible" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#FF000000"
+            android:minWidth="200dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/points"/>
+
+        <View
+            android:id="@+id/hr_line"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@color/card_border_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/next" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/current_policy_holder"
+            style="@style/body_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:drawablePadding="@dimen/dp6"
+            android:gravity="center_horizontal|center"
+            android:paddingHorizontal="@dimen/dp24"
+            android:visibility="visible"
+            android:textColor="@color/tx_dark_medium_grey"
+            app:drawableStartCompat="@drawable/ic_trip_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hr_line"
+            android:text="@string/current_policyholder_text"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/point_container_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/setup_intro_bullet_first"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="@dimen/dp4"
+        android:layout_height="@dimen/dp4"
+        android:baseline="7dp"
+        android:src="@drawable/circle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/text_view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/body_2"
+        android:id="@+id/text_view"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp12"
+        android:textColor="@color/tx_dark_grey"
+        app:layout_constraintLeft_toRightOf="@id/setup_intro_bullet_first"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="@string/congratulation"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

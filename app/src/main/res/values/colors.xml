@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name= "tx_deep_grey">#2A2E3C</color>
+    <color name= "tx_dark_grey">#414858</color>
+    <color name= "card_border_light">#E3E3E3</color>
+    <color name= "tx_dark_medium_grey">#797F86</color>
+    <color name="pr_active_text">#414758</color>
+    <color name="secondary">#B3D7F4</color>
+    <color name ="primary">#212536</color>
+    <color name="white_48">#AAFFFFFF</color>
+
+    <color name="light_green">#CEF6E9</color>
+    <color name="button_inactive">#6A6B69</color>
+</resources>
